@@ -16,12 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+
+import food.views
 from users import views as user_views
 from django.contrib.auth import views as authentication_views
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('', food.views.IndexClassView.as_view(), name='origin'),
     path('admin/', admin.site.urls),
     path('food/', include('food.urls')),
     path('register/', user_views.register, name='register'),
