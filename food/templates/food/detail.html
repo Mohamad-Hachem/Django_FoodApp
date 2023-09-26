@@ -11,6 +11,7 @@
                     <h3>${{ object.item_price }}</h3>
                     <a href="{% url 'food:delete_item' item.id %}" class="btn btn-danger">Delete</a>
                     <a href="{% url 'food:update_item' item.id %}" class="btn btn-warning">Update</a>
+                    <a href="{% url 'food:index' %}" class="btn btn-primary">Return Home</a>
                 </div>
 
             </div>
